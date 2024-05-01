@@ -17,38 +17,40 @@
               <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
             </svg> -->
             <img src="./assets/clan-badge.png" class="img-fluid" alt="clan badge">
-            <span>Skywalker Ranch</span>
+            <h2>Skywalker Ranch</h2>
           </a>
         </h1>
-        <a href="https://github.com/PGA-dev?tab=repositories" target="_blank" rel="noopener">Check out my Repo!</a>
+        <button type="button" class="btn btn-outline-alert me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Open Nav Menu</button>
+
+        
       </header>
 
-      <h1>Get started with Bootstrap</h1>
+      <h1>A Basic Parking Lot</h1>
       <div class="col-lg-8 px-0">
-        <p class="fs-4">You've successfully loaded up a Bootstrap example! It's loaded up with <a href="https://getbootstrap.com/">Bootstrap 5</a> and tooling for compiling our Sass and JavaScript to your needs.</p>
-        <p>If this button appears blue and the link appears purple, you've done it!</p>
+        <p class="fs-4">Skywalker Ranch is your basic farm farm CC clan, with very little to redeem her other than the reference to the Disney owned property.</p>
+        <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Jedi Catulus" data-bs-content="Name means Jedi Wolf Puppy...kind of a joke off of my ex-wife's nickname for me.">Current Leader</a>
       </div>
 
-      <button type="button" class="btn btn-success me-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Toggle offcanvas</button>
-      <a id="popoverButton" class="text-success" href="#" role="button" data-bs-toggle="popover" title="Custom popover" data-bs-content="This is a Bootstrap popover.">Example popover</a>
+      
+
 
       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <h2 class="offcanvas-title" id="offcanvasExampleLabel">Links</h2>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div>
-            Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+          <div class="text-success">
+           Check our join page out, and contact via email if you are interested in sleeping a lot
           </div>
           <div class="dropdown mt-3">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+            <button class="btn btn-outline-alert dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
               Dropdown button
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="#">Players List</a></li>
+              <li><a class="dropdown-item" href="#">Contact</a></li>
+              <li><a class="dropdown-item" href="#">Join</a></li>
             </ul>
           </div>
         </div>
@@ -56,19 +58,18 @@
 
       <hr class="col-1 my-5 mx-0">
 
-      <h2>Guides</h2>
-      <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
+      <h2 class="text-success">Clash Links</h2>
       <ul class="icon-list">
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap quick start guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/webpack/">Bootstrap Webpack guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/parcel/">Bootstrap Parcel guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/vite/">Bootstrap Vite guide</a></li>
-        <li><a href="https://getbootstrap.com/docs/5.3/getting-started/contribute/">Contributing to Bootstrap</a></li>
+        <li><a href="https://supercell.com/en/games/clashofclans/">Clash of Clans</a></li>
+        <li><a href="https://clashofclans.fandom.com/wiki/Clash_of_Clans_Wiki">Clash Wiki</a></li>
+        <li><a href="https://onehiveclan.wixsite.com/onehiveraids">One Hive</a></li>
+        <li><a href="https://tribegaming.gg/">Tribe Gaming</a></li>
+        <li><a href="https://clanbashnation.com/bashnation/">Bash Nation</a></li>
       </ul>
 
       <hr class="mt-5 mb-4">
 
-      <p class="text-muted">Created and open sourced by the Bootstrap team. Licensed MIT.</p>
+      <a href="https://github.com/twbs/examples/tree/main/sass-js" target="_blank" rel="noreferrer" class="text-muted">Created by PGA using the sass-js template from the Bootstrap team. Licensed MIT.</a>
     </div>
 
     <script type="module" src="js/main.js"></script>
