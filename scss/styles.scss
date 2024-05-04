@@ -39,6 +39,7 @@ $body-bg: rgba(0,0,0,.9);
 $border-radius: .4rem;
 $success: rgba(255,255,255,1);
 $alert: rgb(255, 0, 0);
+$info: rgba(0,255,255,1);
 // $blue: rgba(0,50,200,1);
 
 // Required
@@ -81,7 +82,7 @@ $alert: rgb(255, 0, 0);
 // @import "bootstrap/scss/placeholders";
 
 // Helpers
-// @import "bootstrap/scss/helpers";
+@import "bootstrap/scss/helpers";
 
 // Utilities
 @import "bootstrap/scss/utilities/api";
@@ -103,3 +104,15 @@ body {
 .carousel-item {
   transition: transform 10ms ease-in-out;
 }
+
+// .popover {
+//   background-color: black;
+// }
+.popover-header{
+  color: black;
+  background-color: var(--bs-primary);
+  border-bottom: 1rem --bs-body solid;
+}
+.popover-body{
+  color: var(--bs-info);
+  }
