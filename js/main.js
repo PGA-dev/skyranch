@@ -62,15 +62,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// var myCarousel = document.querySelector('#carouselSrIndicators');
-// var carousel = new bootstrap.Carousel(myCarousel);
-
-//POPOVER
-// document.querySelectorAll('[data-bs-toggle="popover"]')
-//   .forEach(popover => {
-//     new bootstrap.Popover(popover)
-//   })
-
 
 document.addEventListener('DOMContentLoaded', function () {
     var popoverTrigger = document.getElementById('popoverButton');
@@ -89,17 +80,17 @@ document.addEventListener('DOMContentLoaded', function () {
           const doc = parser.parseFromString(html, "text/html");
           // Assume the table has an ID or a unique class for easy selection
           const row = doc.querySelector('table#players tr:nth-child(2)');
-  //WE NEED TO UPDATE THIS TO GRAB THE RIGHT VERSION, PLUS THE ROW HEADING AS THIS IS THE PLAYERS ID
+//UPDATE FOR HEADINGS AND MORE INFO
           // Select only the first two <td> elements from this row
           const cells = row.querySelectorAll('td:nth-child(-n+2)');
           let filteredRowContent = '';
           cells.forEach(cell => {
-            filteredRowContent += cell.outerHTML + ' ';
+            filteredRowContent += '| ' + cell.outerHTML + ' ';
           });
   
           // Set the content of the popover
           popover.setContent({
-            '.popover-body': filteredRowContent
+            '.popover-body': filteredRowContent + ' |'
           });
         })
         .catch(error => console.error('Error loading the table row:', error));
