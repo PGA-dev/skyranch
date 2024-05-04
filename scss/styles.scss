@@ -91,11 +91,15 @@ $alert: rgb(255, 0, 0);
 // Custom styles
 //
 
-@import "icon-list";
+@import "svg-list";
+html{
+  scroll-behavior: smooth;
+}
 
 body {
   padding: 1.5rem;
 }
+
 .carousel-item {
   transition: transform 10ms ease-in-out;
 }
