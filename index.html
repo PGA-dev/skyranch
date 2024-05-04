@@ -30,8 +30,34 @@
     </header>
 
 <!--FIRST CONTENT SECTION-->
-    <div>
+    <!-- <div>
       <img src="./assets/pga1.png" class="d-block w-100" alt="Skywalker Ranch">
+    </div> -->
+    <div id="carouselSrIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselSrIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselSrIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselSrIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/pga1.png" class="d-block w-100" alt="pga base 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/home_message.png"  class="d-block w-100" alt="pga base 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/home_back.png"  class="d-block w-100" alt="pga base 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSrIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselSrIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
     <div class="mb-5 border-bottom">
       <br>
@@ -46,12 +72,13 @@
         data-bs-content="Name means Jedi Wolf Puppy...kind of a joke off of my ex-wife's nickname for me.">Current
         Leader</a>
     </div>
-
+  <!--OFF CANVAS NAV-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
       <div class="offcanvas-header">
         <h2 class="offcanvas-title" id="offcanvasExampleLabel">Links</h2>
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
+      <!--OFFCANVAS BODY-->
       <div class="offcanvas-body">
         <div class="text-success">
           Check our join page out, and contact via email if you are interested in sleeping a lot
