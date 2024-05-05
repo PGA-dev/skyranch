@@ -92,7 +92,7 @@ popoverTrigger.addEventListener('click', function () {
      cells.forEach((cell, index) => {
        // Only include headings and cells for which there are both headers and data
        if (headers[index]) {
-         content += `<h6>${headers[index]}</h6>${cell.outerHTML}`;
+         content += `<h6>${headers[index]}</h6>${cell.outerHTML} <br><br>`;
        }
      });
      content += '</div>';
