@@ -34,12 +34,12 @@ $offcanvas-box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
 @import "bootstrap/scss/functions";
 
 // Customize some defaults
-$body-color: rgba(0,100,255,1);
-$body-bg: rgba(0,0,0,.9);
+$body-color: rgba(0, 100, 255, 1);
+$body-bg: rgba(0, 0, 0, .9);
 $border-radius: .4rem;
-$success: rgba(255,255,255,1);
+$success: rgba(255, 255, 255, 1);
 $alert: rgb(255, 0, 0);
-$info: rgba(0,255,255,1);
+$info: rgba(0, 255, 255, 1);
 // $blue: rgba(0,50,200,1);
 
 // Required
@@ -93,14 +93,17 @@ $info: rgba(0,255,255,1);
 //
 
 @import "svg-list";
-html{
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
   padding: 1.5rem;
 }
-
+h6 {
+  color: var(--bs-light);
+}
 .carousel-item {
   transition: transform 10ms ease-in-out;
 }
@@ -108,11 +111,13 @@ body {
 // .popover {
 //   background-color: black;
 // }
-.popover-header{
+.popover-header {
   color: black;
   background-color: var(--bs-primary);
   border-bottom: 1rem --bs-body solid;
 }
-.popover-body{
+
+.popover-body {
   color: var(--bs-info);
-  }
+
+}

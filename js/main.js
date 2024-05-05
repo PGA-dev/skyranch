@@ -60,41 +60,52 @@ document.addEventListener("DOMContentLoaded", function() {
       if (prevSlideIndex < 0) prevSlideIndex = slides.length - 1; // Wrap around to last slide
       goToSlide('#carouselSrIndicators', prevSlideIndex);
   });
+
+//POPOVER
+
+var popoverTrigger = document.getElementById('popoverButton');
+var popover = new bootstrap.Popover(popoverTrigger, {
+  title: 'Leader',
+  content: 'Loading content...',
+  html: true
 });
 
+popoverTrigger.addEventListener('click', function () {
+  // Fetch the external HTML page
+  fetch('players.html')
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
 
-document.addEventListener('DOMContentLoaded', function () {
-    var popoverTrigger = document.getElementById('popoverButton');
-    var popover = new bootstrap.Popover(popoverTrigger, {
-      title: 'Leader',
-      content: 'Loading content...',
-      html: true
-    });
-  
-    popoverTrigger.addEventListener('click', function () {
-      // Fetch the external HTML page
-      fetch('players.html')
-        .then(response => response.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const doc = parser.parseFromString(html, "text/html");
-          // Assume the table has an ID or a unique class for easy selection
-          const row = doc.querySelector('table#players tr:nth-child(2)');
-//UPDATE FOR HEADINGS AND MORE INFO
-          // Select only the first two <td> elements from this row
-          const cells = row.querySelectorAll('td:nth-child(-n+2)');
-          let filteredRowContent = '';
-          cells.forEach(cell => {
-            filteredRowContent += '| ' + cell.outerHTML + ' ';
-          });
-  
-          // Set the content of the popover
-          popover.setContent({
-            '.popover-body': filteredRowContent + ' |'
-          });
-        })
-        .catch(error => console.error('Error loading the table row:', error));
-    });
-  });
+     // Fetch the headers from the table
+     const headers = Array.from(doc.querySelectorAll('table#players th')).map(th => th.textContent.trim());
+
+     // Select the first row (leader) from the table #players
+     const row = doc.querySelector('table#players tr#leader:first-child');
+
+     // Get data cells from the row
+     const cells = row.querySelectorAll('td');
+
+     // Build content with headings and corresponding cell data
+     let content = '<div>';
+     cells.forEach((cell, index) => {
+       // Only include headings and cells for which there are both headers and data
+       if (headers[index]) {
+         content += `<h6>${headers[index]}</h6>${cell.outerHTML}`;
+       }
+     });
+     content += '</div>';
+
+
+      // Set the content of the popover
+      popover.setContent({
+        '.popover-body': content
+      });
+    })
+    .catch(error => console.error('Error loading the table row:', error));
+});
+
+});
 
 
