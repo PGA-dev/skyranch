@@ -1,11 +1,14 @@
-// Import the Bootstrap bundle
-//
-// This includes Popper and all of Bootstrap's JS plugins.
+/**
+ * Main Javascript for entire site
+ * Owner: PGA
+ * 
+ */
 
-//import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
+
+// Import the Bootstrap bundle
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
-//
+
 // CAROUSEL
 document.addEventListener("DOMContentLoaded", function() {
   // Function to go to a specific slide
@@ -15,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
       let indicators = document.querySelectorAll(carouselId + ' .carousel-indicators [data-bs-slide-to]');
 
       if (slideIndex < 0 || slideIndex >= slides.length) {
-          return; // Out of bounds
+          return; // If Out of bounds 
       }
 
       // Remove active class from all slides and indicators
@@ -83,11 +86,9 @@ popoverTrigger.addEventListener('click', function () {
 
      // Select the first row (leader) from the table #players
      const row = doc.querySelector('table#players tr#leader:first-child');
-
-     // Get data cells from the row
+    //Inside the selected row grab a NodeList of all td items
      const cells = row.querySelectorAll('td');
 
-     // Build content with headings and corresponding cell data
      let content = '<div>';
      cells.forEach((cell, index) => {
        // Only include headings and cells for which there are both headers and data
@@ -97,8 +98,6 @@ popoverTrigger.addEventListener('click', function () {
      });
      content += '</div>';
 
-
-      // Set the content of the popover
       popover.setContent({
         '.popover-body': content
       });
@@ -106,6 +105,10 @@ popoverTrigger.addEventListener('click', function () {
     .catch(error => console.error('Error loading the table row:', error));
 });
 
+
+
+
+//end of Callback nest for DomContentloaded
 });
 
 
