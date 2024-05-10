@@ -16,16 +16,12 @@
             <h1 class="h4">
                 <a href="/" class="d-flex align-items-center text-success text-decoration-none">
                     <img src="./assets/clan-badge.png" class="img-fluid" alt="clan badge">
-                    <h2>Contact Form</h2>
+                    <h2>Join the Clan</h2>
                 </a>
             </h1>
             <button type="button" class="btn btn-outline-alert me-3" data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasExample">Open Nav Menu</button>
-
-
         </header>
-        <!--FIRST CONTENT SECTION-->
-        <!--SECOND CONTENT SECTION-->
 
         <!--OFF CANVAS NAV-->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
@@ -55,7 +51,105 @@
             </div>
         </div>
 
+        <!--FORM CONTENT-->
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">First name</label>
+              <input type="text" class="form-control" id="validationCustom01" value="First Name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="validationCustom02" value="Last Name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom03" class="form-label">Age</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                  Please provide a valid Age.
+                </div>
+              </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">PlayerTag</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">#</span>
+                <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label for="validationCustom03" class="form-label">Player Name</label>
+              <input type="text" class="form-control" id="validationCustom03" required>
+              <div class="invalid-feedback">
+                Please provide a valid Player Name.
+              </div>
+            </div>
+            <div class="col-md-2">
+              <label for="validationCustom04" class="form-label">TH LVL</label>
+              <select class="form-select" id="validationCustom04" required>
+                <option selected disabled value="">TH</option>
+                <option>16</option>
+                <option>15</option>
+                <option>14</option>
+                <option>13</option>
+                <option>12</option>
+                <option>11</option>
+                <option>10</option>
+                <option>9</option>
+                <option>8</option>
+                <option>7</option>
+                <option>6</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+              </select>
+              <div class="invalid-feedback">
+                Please select a valid Town Hall Level.
+              </div>
+            </div>
+            <div class="mb-3">
+                <label for="validationCustom05" class="form-label">Message to Clan Leaders</label>
+                <textarea class="form-control" id="validationCustom05" placeholder="Why do you want to Join SkyWalker Ranch? Required for serious consideration..." required></textarea>
+                <div class="invalid-feedback">
+                   
+                </div>
+              </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit"> Submit Join via Clan Email
+
+              </button>
+            </div>
+          </form>
+
         <hr class="mt-5 mb-4">
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit" id="disCrd"><a class="text-success" href="https://discord.gg/NcCNVAXb" target="_blank" rel="noreferrer">Join Via Clan Discord</a> 
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+                  <path d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"/>
+                </svg>
+            </button>
+          </div>
+
+          <hr class="mt-5 mb-4">
 
         <a href="https://github.com/twbs/examples/tree/main/sass-js" target="_blank" rel="noreferrer"
             class="text-muted">
