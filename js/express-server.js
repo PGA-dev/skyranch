@@ -1,5 +1,6 @@
 /**
- * FOR USE WITH AN EXPRESS SERVER APPLICATION
+ * FOR USE WITH AN EXPRESS SERVER APPLICATION 
+ * USING GMAIL FOR THE EXAMPLE
  * 
  */
 
@@ -18,26 +19,21 @@ app.use(bodyParser.json());
 app.post('/submit-form', (req, res) => {
     const formData = req.body;
 
-    // Create a nodemailer transporter
+    // Create a nodemailer transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
-        /* 
-        Configure your email transport options here.
-        For example, you can use SMTP transport:
         service: 'Gmail',
         auth: {
-            user: 'your_email@gmail.com',
-            pass: 'your_email_password'
+            user: '123fakeaccount@gmail.com', // Your Gmail account
+            pass: 'your_gmail_password' // Your Gmail password or an app password
         }
-        */
     });
 
     // Construct email message
     const mailOptions = {
-        from: 'your_email@gmail.com', // Sender address
-        to: 'recipient_email@example.com', // Receiver address
-        subject: 'New Form Submission', // Subject line
-        text: JSON.stringify(formData), // Plain text body
-        // You can customize the email message format as needed
+        from: '123fakeaccount@gmail.com',
+        to: 'recipient_email@example.com',
+        subject: 'New Form Submission',
+        text: JSON.stringify(formData)
     };
 
     // Send email
