@@ -106,15 +106,17 @@ h6 {
 }
 .carousel-item {
   transition: transform 10ms ease-in-out;
+  border-color: var(--bs-primary);
 }
 
-// .popover {
-//   background-color: black;
-// }
+header{
+  border-color: var(--bs-primary);
+}
+
 .popover-header {
   color: black;
   background-color: var(--bs-primary);
-  border-bottom: 1rem --bs-body solid;
+  border-bottom: .1rem var(--bs-success) solid;
 }
 
 .popover-body {
