@@ -9,8 +9,11 @@
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 
-// CAROUSEL
+//NEST
 document.addEventListener("DOMContentLoaded", function() {
+  'use strict'
+
+// CAROUSEL  
   // Function to go to a specific slide
   function goToSlide(carouselId, slideIndex) {
       let carouselInner = document.querySelector(carouselId + ' .carousel-inner');
@@ -109,7 +112,7 @@ popoverTrigger.addEventListener('click', function () {
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
-    'use strict'
+    
   
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
