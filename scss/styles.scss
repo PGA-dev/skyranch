@@ -104,6 +104,11 @@ body {
 h6 {
   color: var(--bs-light);
 }
+
+.accordian-header{
+  background-color: var(--bs-info);
+  color: var(--bs-body);
+}
 .carousel-item {
   transition: transform 10ms ease-in-out;
   border-color: var(--bs-primary);
