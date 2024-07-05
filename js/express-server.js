@@ -11,9 +11,19 @@ const nodemailer = require('nodemailer');
 
 const app = express();
 const port = 3000; // Change this port as needed
-
+// const discordRes = 'https://discord.gg/PVtH2RBY'
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
+
+
+app.get('/get-discord-invite', (req, res) => {
+    // Optional: Check if the user is authenticated or meets certain criteria
+    if (req.isAuthenticated()) {
+        res.json({ url: 'https://discord.gg/PVtH2RBY' });
+    } else {
+        res.status(403).json({ error: 'Authentication required' });
+    }
+});
 
 // POST route to handle form submissions
 app.post('/submit-form', (req, res) => {
