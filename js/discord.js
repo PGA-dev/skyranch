@@ -1,10 +1,20 @@
-  //DISCORD
+  /**
+   * DISCORD
+   * 
+   */
+  
   const discord = document.getElementById('discordInviteBtn'); 
-  discord.addEventListener('click', function() {
-      window.location.href = 'https://discord.gg/PVtH2RBY'; // Directly use the Discord invite link
+  discord.addEventListener('click', function(e) {
+    e.preventDefault();  // Prevent the default action
+    window.open('https://discord.gg/PVtH2RBY', '_blank');// Directly use the Discord invite link
   });
 
-//DISCORD FOR SERVER USE WITH JSON/EXPRESS
+
+/**
+ * DISCORD
+ * DISCORD FOR SERVER USE WITH JSON/EXPRESS
+ */
+
 //   document.getElementById('disCrdEXAMPLE').addEventListener('click', function() {
 //     fetch('/get-discord-invite')
 //     .then(response => response.json())
