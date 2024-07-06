@@ -8,8 +8,8 @@
 // Import the Bootstrap bundle
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
-import { initializePopover } from "./popover.js";
-import { carouselLoader } from "./carousel.js";
+import { initializePopover } from "./index/popover.js";
+import { carouselLoader } from "./index/carousel.js";
 
 document.addEventListener("DOMContentLoaded", function() {
   'use strict'
