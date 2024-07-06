@@ -5,8 +5,8 @@
   
   const discord = document.getElementById('discordInviteBtn'); 
   discord.addEventListener('click', function(e) {
-    e.preventDefault();  // Prevent the default action
-    window.open('https://discord.gg/PVtH2RBY', '_blank');// Directly use the Discord invite link
+    e.preventDefault(); 
+    window.open('https://discord.gg/PVtH2RBY', '_blank');
   });
 
 
