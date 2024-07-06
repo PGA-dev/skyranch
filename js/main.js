@@ -1,7 +1,7 @@
 /**
- * Main Javascript DOM interface for entire site
+ * Main Javascript DOM interface for INDEX
  * Owner: PGA
- * 
+ * APPROACH LOADS ALL SCRIPTS FOR ONLY INDEX PAGE -- SEE OTHER FOLDERS FOR EACH PAGE
  */
 
 
@@ -9,15 +9,15 @@
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import { initializePopover } from "./popover.js";
-
+import { carouselLoader } from "./carousel.js";
 
 document.addEventListener("DOMContentLoaded", function() {
   'use strict'
   /** 
-   * SCRIPTS FOR SEPARATE PAGES
+   * SCRIPTS FOR SEPARATE FUNCTION IMPORTS FOR INDEX
    * */ 
   initializePopover();
-
+  carouselLoader();
 
 
 /**

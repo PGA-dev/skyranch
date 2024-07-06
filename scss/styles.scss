@@ -82,6 +82,13 @@ h6 {
   color: var(--bs-light);
 }
 
+.table-striped{
+  th{
+    color: var(--bs-info)
+  }
+}
+
+
 .accordian-header{
   background-color: var(--bs-info);
   color: var(--bs-body);

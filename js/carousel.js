@@ -1,5 +1,7 @@
 // CAROUSEL  
   // Function to go to a specific slide
+
+export function carouselLoader(){
   function goToSlide(carouselId, slideIndex) {
     let carouselInner = document.querySelector(carouselId + ' .carousel-inner');
     let slides = carouselInner.querySelectorAll('.carousel-item');
@@ -50,4 +52,6 @@ prevButton.addEventListener('click', function() {
     let prevSlideIndex = Array.from(slides).indexOf(currentSlide) - 1;
     if (prevSlideIndex < 0) prevSlideIndex = slides.length - 1; // Wrap around to last slide
     goToSlide('#carouselSrIndicators', prevSlideIndex);
-});
+})
+
+};
