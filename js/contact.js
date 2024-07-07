@@ -1,4 +1,10 @@
-// FORM
+/**
+ * CONTACT SCRIPTS
+ * 
+ */
+
+// Import the Bootstrap bundle
+import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 document.addEventListener('DOMContentLoaded', function(){
