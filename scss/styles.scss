@@ -97,16 +97,16 @@ h6 {
 //adjust active starting and ending points for the transition effect
 .carousel-item-next:not(.carousel-item-start),
 .active.carousel-item-end {
-  transform: translateX(100%);
+  transform: translateX(0%);
 }
 
 .carousel-item-prev:not(.carousel-item-end),
 .active.carousel-item-start {
-  transform: translateX(-100%);
+  transform: translateX(-0%);
 }
 
 .carousel-item {
-  transition: transform 10ms ease-in-out;
+  transition: transform 5ms ease-in-out;
   border-color: var(--bs-primary);
 }
 
